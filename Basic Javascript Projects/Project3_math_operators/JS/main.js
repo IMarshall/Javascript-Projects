@@ -61,7 +61,7 @@ function dec() {
 
 //round the counter down
 function round() {
-    x = Math.floor(x)
+    x = x - (x % 1);
     updateCount();
     winner(x);
 }
