@@ -31,3 +31,30 @@ function sliceItUp() {
         document.getElementById("clicky").innerHTML = "We're done here.";
     }
 }
+
+
+//function demonstrating toString() number method
+function numToString() {
+    x = 12
+    document.getElementById("num").innerHTML = x.toString() + " is a " + typeof(x.toString()) +".";
+}
+
+
+function displayPi() {
+    document.getElementById("prec").innerHTML = Math.PI;
+    document.getElementById("piString").innerHTML = Math.PI;
+}
+
+//function demonstrating toPrecision() number method
+function precision() {
+    x = document.getElementById("piDigits").value;
+    piShort = Math.PI.toPrecision(x);
+    document.getElementById("prec").innerHTML = piShort;
+}
+
+//function demonstrating toFixed() number method
+function fixedString() {
+    x = document.getElementById("piDigits2").value;
+    piShortString = Math.PI.toFixed(x);
+    document.getElementById("piString").innerHTML = piShortString + " is a " + typeof(piShortString) + ".";
+}

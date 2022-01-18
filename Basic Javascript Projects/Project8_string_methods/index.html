@@ -7,14 +7,27 @@
     <script src="JS/main.js"></script>
 </head>
 
-<body>
+<body onload="displayPi()">
 
     <button onclick="concatenate()">Click here for some light reading.</button>
     <p id="sentence">&nbsp;</p>
 
     <h1 id="clicky" onclick="sliceItUp()">Click here to slice it up.</h1>
     <p id="just_a_slice">'When you look annoyed all the time, people think you're busy' -George Costanza</p>
+    <br>
 
+    <button onclick="numToString()">Click here to change the number to a string.</button>
+    <p id="num">12 is a number.</p><br>
+
+    <h3>How long would you like your Pi to be?</h3>
+    <input id="piDigits" value="" /><br>
+    <button onclick="precision()">Click to shorten Pi to your chosen number of digits.</button>
+    <p id="prec"></p>
+
+    <h3>How many decimal places would you like your string of Pi to have?</h3>
+    <input id="piDigits2" value="" /><br>
+    <button onclick="fixedString()">Click to shorten Pi to your chosen number of decimals and convert it to a string.</button>
+    <p id="piString"></p>
 </body>
 
 </html>
