@@ -53,3 +53,53 @@ function constant_Function2() {
 }
 window.alert(Instruments);
 
+
+//function to utilize the return statement
+function returnFunction(name) {
+    return "Hello " + name;
+}
+
+document.getElementById("Return").innerHTML = returnFunction("World!");
+
+//object with let keyword including properties and a method
+let SteelySong = {
+    title: "Cousin Dupree",
+    album: "Two Against Nature",
+    year: "2000",
+    grammy: "Best Pop Performance by a Duo or Group with Vocal",
+    description: function () {
+        return "The song " + this.title + " from the album " + this.album +
+            " (" + this.year + ") by Steely Dan, won a Grammy for " + this.grammy + ".";
+    }
+};
+
+document.getElementById("Steely_Dan").innerHTML = SteelySong.description();
+
+//while loop with break statement
+function Break_Loop() {
+    var blank = "";
+    var x = 10;
+    while (x >= 0) {
+        blank += "<br>" + x;
+        x--
+        if (x == 5) {
+            break;
+        }
+    }
+    document.getElementById("Break").innerHTML = blank;
+}
+
+//while loop with continue statement
+function Continue_Loop() {
+    var blank = "";
+    var x = 11;
+    while (x > 0) {
+        x--
+        if (x == 5) {
+            blank += "<br>";
+            continue;
+        }
+        blank += "<br>" + x;
+    }
+    document.getElementById("Continue").innerHTML = blank;
+}
