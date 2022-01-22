@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+    <script src="./JS/main.js" defer></script>
+</head>
+
+<body>
+
+    <form action="">
+        <!--NAME ENTRY-->
+        <div class="name_entry">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+        </div>
+
+        <!--FAVORITE PET-->
+        <div class="fav_pet">
+            <p>Which do you prefer?</p>
+
+            <div class="other">
+                <input type="radio" id="dogs" name="fav_animal" value="Dogs">
+                <label for="dogs">Dogs</label><br>
+
+                <input type="radio" id="cats" name="fav_animal" value="Cats">
+                <label for="cats">Cats</label><br>
+            </div> 
+        </div>
+
+        <!--MEMORY TEST-->
+        <div class="mem_test">
+        <p>Check all that apply:</p>
+        
+                <div class="other">
+                <input type="checkbox" id="Person" name="trump" value="Person">
+                <label for="Person">Person</label><br>
+                
+                <input type="checkbox" id="Woman" name="trump" value="Woman">
+                <label for="Woman">Woman</label><br>
+
+                <input type="checkbox" id="Man" name="trump" value="Man">
+                <label for="Man">Man</label><br>
+
+                <input type="checkbox" id="Camera" name="trump" value="Camera">
+                <label for="Camera">Camera</label><br>
+
+                <input type="checkbox" id="TV" name="trump" value="TV">
+                <label for="TV">TV</label><br><br>
+            </div>
+        </div>
+        
+        <!--SUBMIT-->
+        <input type="submit" value="SUBMIT">
+
+    </form>
+    
+</body>
+
+</html>
