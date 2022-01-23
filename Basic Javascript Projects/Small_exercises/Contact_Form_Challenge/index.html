@@ -9,14 +9,14 @@
 
 <body>
 
-    <form action="">
+    <form name="myForm" action="" onsubmit="return validateForm()">
         <!--NAME ENTRY-->
         <div class="name_entry">
             <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
+            <input type="text" id="fname" name="fname" pattern="[A-Za-z]+" required autofocus><br>
 
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname"><br>
+            <input type="text" id="lname" name="lname" pattern="[A-Za-z]+" required><br>
         </div>
 
         <!--FAVORITE PET-->
@@ -34,9 +34,9 @@
 
         <!--MEMORY TEST-->
         <div class="mem_test">
-        <p>Check all that apply:</p>
+        <p>Check everything you remember:</p>
         
-                <div class="other">
+            <div class="other">
                 <input type="checkbox" id="Person" name="trump" value="Person">
                 <label for="Person">Person</label><br>
                 
