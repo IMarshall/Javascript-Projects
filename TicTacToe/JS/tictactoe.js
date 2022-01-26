@@ -14,12 +14,12 @@ function placeXOrO(squareNumber) {
         // This condition checks whose turn it is.
         if (activePlayer === "X") {
             // If activePlayer is equal to 'X', the x.png is placed in HTML.
-            select.style.backgroundImage = 'url("img/x.png")';
+            select.style.backgroundImage = 'url("img/jerry.png")';
             // Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         }
         else {
             // If activePlayer is equal to 'O', the o.png is placed in HTML.
-            select.style.backgroundImage = 'url("img/o.png")';
+            select.style.backgroundImage = 'url("img/george.png")';
         }
         // squareNumber and activePlayer are concatenated together and added to the array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -36,10 +36,15 @@ function placeXOrO(squareNumber) {
         }
 
         // This function plays placement sound.
-        audio('./media/place.mp3');
+        if (activePlayer === 'X') {
+            audio('./media/hi_click.mp3');
+        } else {
+            audio('./media/lo_click.mp3');
+        }
+        
         // This condition checks to see if it is computers turn.
         if (activePlayer === "O") {
-            // This function disbales clicking for computer choice.
+            // This function disables clicking for computer choice.
             disableClick();
             // This function waits 1 second before computer places image and enables click.
             setTimeout(function () { computersTurn(); }, 1000);
@@ -208,7 +213,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     // This line disallows clicking while the win sound is playing.
     disableClick();
     // This line plays the win sounds.
-    audio('./media/winGame.mp3');
+    audio('./media/win.mp3');
     // This line calls our main animation loop.
     animateLineDrawing();
     // This line waits 1 second. Then, clears canvas, resets game, and allows clicking again.
