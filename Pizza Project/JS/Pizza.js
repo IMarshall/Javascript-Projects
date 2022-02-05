@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('fade-out');
+})
+
 function getReceipt() {
     // This initializes our string so it can get passed from
     // function to function, growing line by line into a full receipt

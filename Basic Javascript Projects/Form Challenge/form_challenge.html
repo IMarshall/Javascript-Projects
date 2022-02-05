@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Form Challenge</title>
+        <meta charset="UTF-8">
+        <script src="form_challenge.js" defer></script>
+        <link rel="stylesheet" href="form_challenge.css">
+    </head>
+
+    <body>
+        <button class="open-button" onclick="openForm()">Open Form</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container" name="phoneForm" action="" onsubmit="return formValidation()" method="post">
+                <h1>Give us your deets.</h1>
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="phone">Phone Number</label><br>
+                <input type="text" id="phone" name="phone"><br>
+                <input type="submit" class="btn" value="Submit">
+                <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+    </body>
+</html>
