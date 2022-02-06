@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            .img-wrapper {
+                width: 40%;
+                margin: 100px auto;
+                overflow: hidden;
+                border: 2px solid black;
+            }
+            .zoom {
+                animation: zoom 15s infinite;
+            }
+
+            @keyframes zoom {
+                0% {transform: scale(1,1);}
+                50% {transform: scale(1.2,1.2);}
+                100% {transform: scale(1,1);}
+            }
+            a {
+                text-align: center;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="img-wrapper">
+            <img id="img1" class="zoom" src="thumb1.jpg" alt="Picture of Space">
+        </div>
+        <a href="#img2">NEXT IMAGE</a>
+        <div class="img-wrapper">
+            <img id="img2" class="zoom" src="thumb2.jfif" alt="Picture of Waterfall">
+        </div>
+        <a href="#img3">NEXT IMAGE</a>
+        <div class="img-wrapper">
+            <img id="img3" class="zoom" src="thumb3.jpg" alt="Picture of Fall">
+        </div>
+        <a href="#img1">TOP</a>
+    </body>
+</html>

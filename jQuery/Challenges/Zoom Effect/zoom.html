@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .img-wrapper {
+                width: 40%;
+                margin: 100px auto;
+                overflow: hidden;
+                border: 2px solid black;
+            }
+            .hubble {
+                animation: zoom 15s infinite;
+            }
+
+            @keyframes zoom {
+                0% {transform: scale(1,1);}
+                50% {transform: scale(1.2,1.2);}
+                100% {transform: scale(1,1);}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="img-wrapper">
+            <img class="hubble" src="IMAX-hubble-3d.jpg" alt="Picture of Space">  
+        </div>
+    </body>
+</html>

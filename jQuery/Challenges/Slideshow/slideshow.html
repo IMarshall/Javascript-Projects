@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #slideshow {
+                margin: 50px auto;
+                position: relative;
+                width: 600px;
+                height: 400px;
+                padding:10px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            }
+            #slideshow > div {
+                position:absolute;
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+            .img-wrapper {
+                /* width: 100%; */
+                /* margin: 0;
+                padding: 0; */
+                overflow: hidden;
+                border: 2px solid black;
+            }
+            .zoom {
+                animation: zoom 15s infinite;
+            }
+
+            @keyframes zoom {
+                0% {transform: scale(1,1);}
+                50% {transform: scale(1.2,1.2);}
+                100% {transform: scale(1,1);}
+            }
+            
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        <script>
+            $(function() {
+                $("#slideshow > div:gt(0)").hide();
+
+                setInterval(function() {
+                    $('#slideshow > div:first')
+                    .fadeOut(1000)
+                    .next()
+                    .fadeIn(1000)
+                    .end()
+                    .appendTo('#slideshow');
+                }, 3000);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="slideshow">
+            <div class="img-wrapper">
+                <img id="img1" class="zoom" src="thumb1.jpg" alt="Picture of Space">
+            </div>
+            <div class="img-wrapper">
+                <img id="img2" class="zoom" src="thumb2.jfif" alt="Picture of Waterfall">
+            </div>
+            <div class="img-wrapper">
+                <img id="img3" class="zoom" src="thumb3.jpg" alt="Picture of Fall">
+            </div>
+        </div>
+    </body>
+</html>
