@@ -28,6 +28,18 @@ function add() {
     return false;
 }
 
+// this function removes the task that was clicked on
+function remove(id) {
+    // get the todo tasks currently in local storage and put them in an array
+    var todos = get_todos();
+    // remove the task that was clicked on - id matches the index of the task
+    todos.splice(id, 1);
+    // redefine the todo variable in local storage to not include the removed task
+    localStorage.setItem('todo', JSON.stringify(todos));
+    // show the new list of todo tasks
+    show();
+}
+
 // this function keeps the tasks permanently displayed on the screen
 function show() {
     // this sets the task that was retrieved as a variable
@@ -38,7 +50,8 @@ function show() {
     // this displays a task to the list in the order that it is inputed
     for (var i = 0; i < todos.length; i++) {
         // this also displays the task as a list and creates the button with the "x"
-        html += '<li>' + todos[i] + '<button class="remove" id=""' + i + '">x</button></li>';
+        html += '<li>' + todos[i] + '<button class="remove" id="' + i
+            + '" onclick="remove('+ i + ')">x</button></li>';
     };
     html += '</ul>';
     // This displays the task as a list
@@ -47,5 +60,8 @@ function show() {
 
 // this displays the inputed task when the 'Add Item' button is clicked
 document.getElementById('add').addEventListener('click', add);
+
+
+
 // this will keep the inputs displayed permanently on the screen
 show();

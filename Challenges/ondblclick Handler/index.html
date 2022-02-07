@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <p id="p" ondblclick="styleChange()" style="color:black">This is my paragraph. Double click it. I dare you.</p>
+    </body>
+    <script>
+        var x = "black";
+
+        function styleChange() {
+            if (x === "black") {
+                document.getElementById("p").style.color="red";
+                document.getElementById("p").innerHTML = "Do it again."
+                x = "red";
+            }
+            else {
+                document.getElementById("p").style.color = "black";
+                x = "black";
+            }
+        };
+    </script>
+</html>
